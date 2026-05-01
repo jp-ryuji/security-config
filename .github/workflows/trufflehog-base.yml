@@ -1,0 +1,20 @@
+name: Shared TruffleHog Scan
+on:
+  workflow_call:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Scan
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          extra_args: >
+            --include-detectors=all
+            --concurrency=10
+            --only-verified
