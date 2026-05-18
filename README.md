@@ -18,7 +18,7 @@ The key insight: GitHub Secret Scanning detects after a push—by then the expos
 
 [gitleaks](https://github.com/gitleaks/gitleaks) is fast and lightweight, making it suitable for local developer hooks.
 
-#### Option A: via the pre-commit framework
+#### Option A: via the pre-commit framework (Recommended)
 
 ```yaml
 # .pre-commit-config.yaml
@@ -34,7 +34,7 @@ pip install pre-commit
 pre-commit install
 ```
 
-#### Option B: install gitleaks directly
+#### Option B: install gitleaks directly  (NOT Recommended)
 
 ```bash
 brew install gitleaks   # macOS
